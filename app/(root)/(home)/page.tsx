@@ -11,9 +11,10 @@ const Home = () => {
 
   // Convert to Indian Standard Time (IST)
   const istTime = new Date(now.toLocaleString("en-US", { timeZone: "Asia/Kolkata" }));
+  const date = (new Intl.DateTimeFormat('en-US', { dateStyle: 'full' })).format(now);
 
   const time = istTime.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' });
-  const date = (new Intl.DateTimeFormat('en-US', { dateStyle: 'full', timeZone: 'Asia/Kolkata' })).format(istTime);
+  // const date = (new Intl.DateTimeFormat('en-US', { dateStyle: 'full', timeZone: 'Asia/Kolkata' })).format(istTime);
 
 
   return (
